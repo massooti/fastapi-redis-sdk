@@ -1,4 +1,4 @@
-site_name: Redis FastAPI
+site_name: FastAPI Redis
 site_description: Official FastAPI integration for Redis
 site_author: Redis
 site_url: https://redis.github.io/fastapi-redis-sdk

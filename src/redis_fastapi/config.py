@@ -26,7 +26,7 @@ CACHE_STATUS_HEADER: str = "X-Redis-Cache"
 
 
 class RedisSettings(BaseSettings):
-    """Central configuration for the Redis FastAPI integration.
+    """Central configuration for the FastAPI Redis integration.
 
     Supports two connection modes:
 

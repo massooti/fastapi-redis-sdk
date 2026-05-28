@@ -1,4 +1,4 @@
-# Redis FastAPI
+# FastAPI Redis
 
 **Official FastAPI integration for Redis** — connection management and DI-based
 caching with automatic key consistency.
