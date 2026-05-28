@@ -96,9 +96,9 @@ DOCS_DEPS = [
 
 @nox.session(python=PYTHON_DEFAULT, default=False)
 def docs_build(session: nox.Session) -> None:
-    """Build the documentation site.  Pass ``-- --strict`` for CI."""
+    """Build the documentation site in strict mode (CI parity)."""
     session.install(*DOCS_DEPS)
-    session.run("mkdocs", "build", *session.posargs)
+    session.run("mkdocs", "build", "--strict", *session.posargs)
 
 
 @nox.session(python=PYTHON_DEFAULT, default=False)

@@ -508,16 +508,16 @@ async def checkout(cart: Cart, cache: CacheBackendDep):
 
 ## Quick reference
 
-| Scenario                                | Recommended                                               |
-|-----------------------------------------|-----------------------------------------------------------|
-| Most GET endpoints                      | [`cache()`](#1-caching-factories)                         |
-| User-specific / authenticated endpoints | [`cache(private=True)`](#http-cache-headers)              |
-| POST/PUT that invalidates a GET         | [`cache_evict()`](#basic-usage)                           |
-| Write-through (update cache on write)   | [`cache_put()`](#basic-usage)                             |
-| Complex multi-step invalidation         | [`CacheBackend`](#cascade-invalidation-across-groups) |
-| Conditional caching (business rules)    | [`CacheBackend`](#conditional-caching)                    |
-| Cache sub-computations independently    | [`CacheBackend`](#intermediate-result-caching)            |
-| Public catalog, high traffic            | [`cache()`](#1-caching-factories)                         |
+| Scenario                                | Recommended                                                    |
+|-----------------------------------------|----------------------------------------------------------------|
+| Most GET endpoints                      | [`cache()`](#1-caching-factories)                              |
+| User-specific / authenticated endpoints | [`cache(private=True)`](#http-cache-headers)                   |
+| POST/PUT that invalidates a GET         | [`cache_evict()`](#basic-usage)                                |
+| Write-through (update cache on write)   | [`cache_put()`](#basic-usage)                                  |
+| Complex multi-step invalidation         | [`CacheBackend`](#cascade-invalidation-across-eviction-groups) |
+| Conditional caching (business rules)    | [`CacheBackend`](#conditional-caching)                         |
+| Cache sub-computations independently    | [`CacheBackend`](#intermediate-result-caching)                 |
+| Public catalog, high traffic            | [`cache()`](#1-caching-factories)                              |
 
 ---
 

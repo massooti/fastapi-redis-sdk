@@ -71,7 +71,7 @@ plugins:
 
 exclude_docs: |
   README.md
-  specs/å
+  specs/
 
 nav:
   - Home: index.md
