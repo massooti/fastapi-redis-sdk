@@ -1,10 +1,10 @@
 site_name: Redis FastAPI
 site_description: Official FastAPI integration for Redis
 site_author: Redis
-site_url: https://redis-developer.github.io/redis-fastapi
+site_url: https://redis.github.io/fastapi-redis-sdk
 
-repo_name: redis-developer/redis-fastapi
-repo_url: https://github.com/redis-developer/redis-fastapi
+repo_name: redis/fastapi-redis-sdk
+repo_url: https://github.com/redis/fastapi-redis-sdk
 edit_uri: edit/main/docs/
 
 theme:
@@ -66,6 +66,7 @@ plugins:
       enable_creation_date: true
       enable_git_follow: false
       fallback_to_build_date: true
+      strict: false
       exclude:
         - specs/*
 
