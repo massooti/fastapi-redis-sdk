@@ -9,6 +9,7 @@ Idiomatic Redis integration for FastAPI - connection management and DI-based cac
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v0.json)](https://astral.sh/ruff)
 [![codecov](https://codecov.io/gh/redis/fastapi-redis-sdk/branch/main/graph/badge.svg?token=yenl5fzxxr)](https://codecov.io/gh/redis/fastapi-redis-sdk)
+[![Guide](https://img.shields.io/badge/mkdocs-guide-526CFE?logo=materialformkdocs&logoColor=white)](https://redis.github.io/fastapi-redis-sdk/)
 
 
 [![Discord](https://img.shields.io/discord/697882427875393627.svg?style=social&logo=discord)](https://discord.gg/redis)
@@ -19,11 +20,11 @@ Idiomatic Redis integration for FastAPI - connection management and DI-based cac
 
 ### Features
 
-- **Fluent setup** - `FastAPIRedis(app).lifespan().caching()` configures pools and caching in one chain
-- **DI-based caching** - `cache()`, `cache_evict()`, `cache_put()` as `Depends()` factories, plus `CacheBackend` for complex invalidation and conditional logic
-- **HTTP-native caching** - ETag, 304 Not Modified, `Cache-Control` directives out of the box
-- **Testable** - full `dependency_overrides` support for caching; no monkey-patching
-- **Production-ready** - TLS, auth, OSS Cluster mode, configurable via environment variables or `.env`
+- **Fluent setup** — `FastAPIRedis(app).lifespan().caching()` configures pools and caching in one chain, attaching to the [FastAPI lifespan events](https://fastapi.tiangolo.com/advanced/events/)
+- **Dependency injection** — `cache()`, `cache_evict()`, `cache_put()` as `Depends()` factories, plus `CacheBackend` for complex invalidation and conditional logic
+- **HTTP-native caching** — [`ETag`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag), [`304 Not Modified`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304), [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) directives out of the box
+- **Testable** — full `dependency_overrides` support; no need for monkey-patching
+- **Pydantic-validated configuration** — fully configurable via environment variables or via an `.env` file
 
 ### Requirements
 
